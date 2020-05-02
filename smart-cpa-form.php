@@ -1,41 +1,40 @@
 <?php
-$config[ 'offerName' ] = 'Eco Slim'; // НАЗВАНИЕ ТОВАРА
-$config[ 'price' ] = 990;            // НОВАЯ ЦЕНА ТОВАРА
-$config[ 'currency' ] = 'руб';       // Валюта - НЕ СТАВИТЬ ТОЧКУ В КОНЦЕ!!!
-$config[ 'action' ] = 'process.php'; // Путь к файлу обработчика формы
+$config[ 'offerName' ] = 'Eco Slim'; // OFFER NAME
+$config[ 'price' ] = 990;            // OFFER PRICE
+$config[ 'currency' ] = 'руб';       // CURRENCY
+$config[ 'action' ] = 'process.php'; // Leads page
 
 $formHtml = <<<'FORM_HTML'
 <div class="order_form shadow">
     <form action="{FORM_ACTION}" method="post" class="x_order_form">
-        <input type="text" value="" placeholder="ФИО" name="name" class="icon_1">
-        <input type="text" value="" placeholder="Телефон" name="phone" class="icon_2">
-        <input type="submit" value="ЗАКАЗАТЬ" name="order_button">
+        <input type="text" value="" placeholder="Name" name="name" class="icon_1">
+        <input type="text" value="" placeholder="Phone" name="phone" class="icon_2">
+        <input type="submit" value="ORDER NOW" name="order_button">
         <p class="snoska"></p>
     </form>
     <div class="timer_box">
         <div class="free__wrap">
             <p class="free__give"
                style="text-align: center !important;padding: 0px !important;text-indent: 0px !important; font-weight:bold;">
-                На {OFFER} действует<br>
-                льготная цена<br>
+                {OFFER} Excluse<br>
+                Discounted Price<br>
                 <span class="free__main"
-                      style="font-size: 22px; font-weight: bold; color: red;">{PRICE} {CURRENCY}.</span>
+                      style="font-size: 22px; font-weight: bold; color: red;">${PRICE} {CURRENCY}</span>
         </div>
         <div class="timer">
-            <p style="text-align: center !important;padding: 0px !important;text-indent: 0px !important">До конца
-                акции:</p>
+            <p style="text-align: center !important;padding: 0px !important;text-indent: 0px !important">Valid until:</p>
             <div class="timer_wrapper1">
                 <span>
                     <b class="d_hours">17</b>
-                    часов
+                    hours
                 </span>
                 <span>
                     <b class="d_minutes">27</b>
-                    минут
+                    minutes
                 </span>
                 <span>
                     <b class="d_seconds">37</b>
-                    секунд
+                    seconds
                 </span>
             </div>
         </div>
